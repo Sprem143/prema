@@ -1,0 +1,3 @@
+[submodule "backend2"]
+	path = backend2
+	url = https://github.com/Sprem143/prema-backend.git

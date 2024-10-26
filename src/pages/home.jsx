@@ -13,7 +13,7 @@ export default function Home(){
         fetchposts();
     },[])
     const fetchposts=async()=>{
-      const result=  await axios.get('https://prema-backend.onrender.com')
+      const result=  await axios.get('https://prema-backend.onrender.com/fetchpost')
         .then(console.log("All post fetched successfully"))
         .catch((err)=>{
             console.log(err);
@@ -23,7 +23,7 @@ export default function Home(){
     }
     const savepost=async()=>{
         try{
-      let result= await axios.post('https://prema-backend.onrender.com', {name:name,post:post},{
+      let result= await axios.post('https://prema-backend.onrender.com/savepost', {name:name,post:post},{
         headers:{
             'Content-Type':'application/json'
         }
